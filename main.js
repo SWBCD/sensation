@@ -32,3 +32,13 @@ var form = document.getElementById("my-form");
     function Submission(){
       alert("Thank you for your submission");
      }
+
+     $(document).ready(function(){
+    $('select').change(function(){
+    var totalVal = 0;
+    $('select.add').each(function(){
+      totalVal +=  parseInt($(this).val()) ;
+      });
+      $('input#amount').val(totalVal);
+     });
+    });
