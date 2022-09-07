@@ -12,17 +12,12 @@ input {
 font-size:16px;
 font-style:bold;
 border:none;
-border-radius:16px;
 }
 .payment{
     text-align:center;
     font-size:16px;
 }
-select,option{
-    border:none;
-    border-radius:13px;
-   background-color:#ddd;
-}
+
 
 body {
   font-family: Arial;
@@ -120,146 +115,7 @@ span.price {
   float: right;
   color: grey;
 }
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-@media (max-width: 800px) {
-  .row {
-    flex-direction: column-reverse;
-  }
-  .col-25 {
-    margin-bottom: 20px;
-  }
-  #amount{
-    text-align:center;
-    }
- }
- .g{
-  text-align:center;
-  font-size:16px;
-  font-style:arial;
-}
-</style>
-</head>
-<body>
-
-<div class="row">
-  <div class="col-75">
-    <div class="container">
-      <form action="https://formspree.io/f/xbjwjzgw" method="POST" id="my-form">
-      
-        <div class="row">
-          <div class="col-50">
-            <h3>Shipping Address</h3>
-            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-            <label for="email"><i class="fa fa-envelope"></i> Email</label>
-            <input type="text" id="email" name="email" placeholder="john@example.com">
-
-            <label for="Phone number"><i class="fa fa-phone"></i> Phone Number</label>
-            <input type="text" id="Phone number" name="Phone number" placeholder="843-517-6775">
-            
-           
-            <label for="Country">Country</label>
-            <select id="Country" name="Country">
-           <option value="USA">America</option>
-           <option value="europe">Europe</option>
-           <option value="Middle Eastern">Middle Eastern</option>
-           <option value="Argentina">Argentina</option>
-           <option value="France">France</option>
-           <option value="Greece">Greece</option>
-           <option value="Sweden">Sweden</option>
-       </select>
-
-            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-            <label for="state">State</label>
-            <input type="text" id="state" name="state" placeholder="Alabama">
-            <label for="city"><i class="fa fa-institution"></i> City</label>
-            <input type="text" id="city" name="city" placeholder="Huntsville">
-
-            <div class="row">
-              <div class="col-50">
-                <label for="zipcode">Zipcode</label>
-                <input type="text" id="zipcode" name="zipcode" placeholder="10001">
-              </div>
-            </div>
-            <label for="Country">Delivery Preference </label>
-            <select id="Delivery Location" name="Delivery Location">
-           <option value="Anywhere">Please choose one</option>
-           <option value="Walkway">Walkway</option>
-           <option value="Mailbox">Mailbox</option>
-           <option value="Driveway">Driveway</option>
-           </select>
-          </div>
-        </div>
-        <label>
-         <p>If your order is created after 2am you will receive your package the next day</p>
-        </label>
-        <button type="submit" class="btn" onclick="Submission()">Submit</button>
-    </div>
-  </div>
-  <div class="col-25">
-    <div class="container">
-      <label for="Product Amounts"><h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>1</b></span></h4></label>
-     
-         <p><a href="product5.html">Peach</a><span class="price"><select class="add" selected="selected"  id="Product Amounts" name="Peach-Moonshine">
-                <option value="0">0</option>
-                <option value="15.00">1</option>
-                <option value="30.00">2</option>
-                <option value="60.00">4</option>
-                
-            </select></span></p>
-     
-         <p><a href="product.html">Fruity-Pebbles</a><span class="price"><select class="add" selected="selected"  id="Product Amounts" name="Sour-Skittlez">
-                <option value="0">0</option>
-                <option value="30.00">3</option>
-                <option value="60.00">7</option>
-                 <option value="110.00">14</option>
-            </select></span></p>
-
-       
-     
-      <p><a href="product2.html">Syrup</a> <span class="price"><select class="add" selected="selected" id="Product Amounts" name="THC Syrup">
-                <option value="0">0</option>
-                <option value="25.00">4floz</option>
-                <option value="35.00">6floz</option>
-                <option value="45.00">8floz</option>
-                <option value="55.00">32floz
-                </option>
-            </select></span></p>
-            
-             <p><a href="product3.html">Edibles</a> <span class="price"><select class="add" selected="selected" id="Product Amounts" name="Edibles">
-                <option vlaue="0">0</option>
-                <option value="20.00">1-Cookie</option>
-                <option value="80.00">4-Cookie</option>
-                <option value="20.00">1-Brownie</option>
-                <option value="80.00">4-Brownie</option>
-              </select></span></p>
-          
- 
-
-      <hr>
-      <p><label>Total <span class="price"><b><input disabled size="3" id="amount" ></b></span></label></p>
-    </div>
-  </div>
-</div>
-        <div class="row">
-          <div class="col-50">
-            <h3 class="payment">Express Payment</h3>
-           <p class="g"><a class="cart-btn" href="https://www.paypal.me/CashReckagrades
-           ">Click to  pay with Paypal</a></p>
-         <p class="g"><b>-or-</b></p>
-          <p class="g"><a class="cart-btn" href="https://cash.app/$Swbuds1">Click to pay with Cashapp</a></p>
-          <a class="btn2" href="./shop.html" role="button">&laquo; Store</a></p>
-    <a class="btn3" href="./index.html" role="button">&laquo; Home</a></p>
-            <div id="smart-button-container">
-      <div style="text-align: center;">
-        <div id="paypal-button-container"></div>
-      </div>
-    </div>  
-</form>
-<style>
-    .btn2 {
+.btn2 {
     padding:12px 18px;
     color:grey;
     background-color:whitesmoke;
@@ -284,10 +140,25 @@ span.price {
 .btn2:hover{
   color:royalblue;
 }
-    #amount{
-    text-align:center;
-    }
-    .cart-btn {
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+.g{
+  text-align:center;
+  font-size:16px;
+  font-style:arial;
+}
+.g:hover{
+  color:royalblue;
+  cursor:pointer;
+}
+.cart-btn {
     padding:10px;
     border-radius:15px;
     background:rgb(222, 218, 218);
@@ -305,17 +176,107 @@ span.price {
   background-color:white;
 }
 </style>
-   <script src="main.js"></script>         
-<script> 
-$(document).ready(function(){
-    $('select').change(function(){
-    var totalVal = 0;
-    $('select.add').each(function(){
-      totalVal +=  parseInt($(this).val()) ;
-      });
-      $('input#amount').val(totalVal);
-     });
-    });
-</script>  
+</head>
+<body>
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="https://formspree.io/f/xbjwjzgw" method="POST" id="my-form">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Shipping Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="Country">Country</label>
+            <select id="Country" name="Country">
+           <option value="USA">America</option>
+           <option value="europe">Europe</option>
+           <option value="Middle Eastern">Middle Eastern</option>
+           <option value="Argentina">Argentina</option>
+           <option value="France">France</option>
+           <option value="Greece">Greece</option>
+           <option value="Sweden">Sweden</option>
+       </select>
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                 <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="Alabama">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="Huntsville">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="zipcode">Zipcode</label>
+                <input type="text" id="zipcode" name="zipcode" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          
+          
+        </div>
+        <label>
+          <input type="checkbox" name="bitcoin"  href="#">Pay with Bitcoin
+        </label>
+        <button type="submit" class="btn" onclick="Myfunction()">Submit</button>
+    </div>
+  </div>
+  <div class="col-25">
+    <div class="container">
+      <label for="Product Amounts"><h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>1</b></span></h4></label>
+      <p><a href="product.html">Purple Truffle</a><span class="price"><select class="add" selected="selected" id="Product Amounts" name="Flower">
+                <option vlaue="0">0</option>
+                <option value="10">1</option>
+                <option value="30.00">3</option>
+                <option value="60.00">6</option>
+            </select></span></p>
+          <p><a href="product.html">Megatron</a><span class="price"><select class="add" selected="selected" id="Product Amounts" name="Flower">
+            <option vlaue="0">0</option>
+            <option value="1">1</option>
+            <option value="30.00">3</option>
+            <option value="60.00">6</option>
+        </select></span></p>
+      <p><a href="product2.html" >THC-Syrup</a> <span class="price"><select class="add" selected="selected" id="Product Amounts" name="Cartridge">
+                <option vlaue="0">0</option>
+                <option value="30.00">1</option>
+                <option value="50.00">2</option>
+                <option value="70.00">3</option>
+                <option value="90.00">4
+                </option>
+            </select></span></p>
+      <p><a href="product3.html">Edibles</a> <span class="price"><select class="add" selected="selected" id="Edibles" name="Edibles">
+                <option vlaue="0">0</option>
+                <option value="20.00">1-Cookies</option>
+                <option value="80.00">4-cookies</option>
+                <option value="20.00">1-brownie</option>
+                <option value="80.00">4-brownie</option>
+            </select></span></p>
+      <hr>
+      <p><label for="total">Total <span class="price" style="color:black"><b><input disabled size="3" id="amount" ></b></span></p></label>
+    </div>
+  </div>
+</div>
+      
+        <div class="row">
+          <div class="col-50">
+            <h3 class="payment">Express Payment</h3>
+            <div id="smart-button-container">
+      <div style="text-align: center;">
+        <div id="paypal-button-container"></div>
+      </div>
+    </div>
+
+    <p class="g"><a href="paypal.html" class="cart-btn">Click to pay with paypal</a></p>
+    <p class="g"><b>-or-</b></p>
+    <p class="g"><a href="https://cash.app/$Swbuds1" class="cart-btn">Click to pay with Cashapp</a></p>
+    <a class="btn2" href="./shop.html" role="button">&laquo; Store</a></p>
+    <a class="btn3" href="./index.html" role="button">&laquo; Home</a></p>
+<script src="main.js"></script>  
+
+</form>
 </body>
 </html>
